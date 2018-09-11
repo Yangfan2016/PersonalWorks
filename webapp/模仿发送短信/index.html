@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+   <meta charset="UTF-8">
+   <title>模仿短信界面</title>
+   <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+</head>
+<body>
+<div class="mainpage">
+	<div class="header">
+	    <h1><!-- 模仿魅族短信app --></h1>
+	</div>
+	<div class="main" id="mainbody">
+	    <div id="overflowbox">
+		    <div class="container clearfix">
+		       	<div class="msgbox right">
+		      		<div class="time">8月28日&nbsp;19:37</div>
+		      		<p class="message">实例文字实例实例实例实例实例实例文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+		      		<div class="dele">删除</div>
+		      	</div>
+		   	</div>
+		   	<div class="container clearfix">
+		      	<div class="msgbox left">
+		         	<div class="time">8月28日&nbsp;19:37</div>
+		      		  	<p class="message">回复实例</p>
+		      		  	<div class="dele">删除</div>
+		   		  	</div>
+		   	</div>
+	    </div>
+	</div>
+	<div class="footer">
+	   	<div class="input">
+	      	<input name="text" type="text" placeholder="短信/彩信" id="inputtext" />
+	         <input type="button" id="send" class="off" disabled="disabled" />      		
+	   	</div>
+	   	<div class="multifunction clearfix">
+	      	<div class="capturebox">
+	         	<div class="picbox">
+	            	<img src="./images/reply.jpg" alt="capture" />
+	         	</div>
+	         	<div class="caption">截图</div>
+	      	</div>
+	      	<div class="voice">
+	         	<div class="picbox">
+	            	<img src="./images/location.jpg" alt="location" />
+	         	</div>
+	         	<div class="caption">录音</div>
+	      	</div>
+	      	<div class="file">
+	         	<div class="picbox">
+	            	<img src="./images/clock.jpg" alt="file" />
+	         	</div>
+	         	<div class="caption">定时发送</div>
+	      	</div>
+	   	</div>
+	   	<div class="plus"><a href="javascript:void(0);" id="more">+</a></div>
+	   	<div class="videobox clearfix">
+	   		<video id="video" autoplay="autoplay">your browser don't support "video" of H5 tag</video>
+	   		<div class="imgbox">
+	   			<canvas style="display:none;" id="canvas"></canvas>
+	   			<img src="" alt="" id="captureimg" />
+	   		</div>
+	   		<div class="btnbox clearfix">
+	   			<a href="javascript:void(0);" id="capture">截图</a>
+	   			<a href="javascript:void(0);" id="close">关闭</a>
+	   		</div>
+	   	</div>
+	</div>
+	<!--弹出框-->
+	<div class="dialogbox">
+	   <div class="dialogcontent">
+	      <div class="d_head clearfix">
+	         <div class="h_content">
+	            <h3>标题</h3>
+	         </div>
+	         <div class="close">x</div>
+	      </div>
+	      <div class="d_body">
+	   开始录音……
+	      </div>
+	      <div class="d_foot clearfix">
+	         <div class="btnclose">关闭</div>
+	         <div class="btnsave">保存</div>
+	      </div>
+	   </div>
+	</div>
+</div>
+<script src="./js/main.js" type="text/javascript"></script>
+<script src="./js/capture.js" type="text/javascript"></script>
+<script src="./js/dialogbox.js" type="text/javascript"></script>
+<script src="./js/jQuery.ripple(testing).js" type="text/javascript"></script>
+</body>
+</html>

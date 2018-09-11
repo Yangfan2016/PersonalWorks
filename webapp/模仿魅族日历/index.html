@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+   <meta charset="UTF-8" />
+   <title>日历插件</title>
+   <link rel="stylesheet" type="text/css" id="mainlink" href="./css/mainPage.css" />
+   <link rel="stylesheet" type="text/css" href="./css/notePage.css" id="pagelink" />
+   <link rel="stylesheet" type="text/css" href="./css/red.css" id="stylelink" />
+</head>
+<body>
+<!--indexPage-->
+<div id="indexPage">
+<div class="head">
+   <div class="pannel_date">
+      <div class="nowDate">
+         <span class="nowMd"><em class="nowMonth">9</em>月<em class="nowDay">14</em>日</span>
+         <span class="nowYd">
+            <em class="nowYear">2016</em>
+            <em class="nowDay_jintian">某天</em>
+         </span>
+      </div>
+   </div>
+   <div class="pannel_week clearfix">
+      <span>一</span>
+      <span>二</span>
+      <span>三</span>
+      <span>四</span>
+      <span>五</span>
+      <span>六</span>
+      <span>日</span>
+   </div>
+</div>
+<div class="main">
+   <div class="calendar clearfix">
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div class="item"><h5>1</h5><p>初一</p></div>
+      <div class="item"><h5>2</h5><p>初一</p></div>
+      <div class="item"><h5>3</h5><p>初一</p></div>
+      <div class="item"><h5>4</h5><p>初一</p></div>
+      <div class="item"><h5>5</h5><p>初一</p></div>
+      <div class="item"><h5>6</h5><p>初一</p></div>
+      <div class="item"><h5>7</h5><p>初一</p></div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+   </div>
+   <div class="noteBox">
+      <div class="title">我的日程</div>
+      <!--<div class="newnote clearfix">
+         <span class="left_arc"></span>
+         <div class="time">下午 6:00</div>
+         <div class="article">
+            <div class="notename">笔记名称</div>
+            <div class="notelocation">位置</div>
+         </div>
+      </div>-->
+   </div>
+</div>
+<div class="footer">
+   <div class="add">+</div>
+</div>
+</div>
+<!--notePage-->
+<div id="notePage">
+    <div class="head">
+       <span class="page_goback">&lt;</span>
+       <span>新事件</span>
+    </div>
+    <div class="main">
+       <div class="notebox clearfix">
+          <input placeholder="添加名称" class="n_input notename" />
+          <img src="./images/note_name.jpg" alt="空图片" class="n_pic" />
+       </div>
+       <div class="notebox clearfix">
+          <div class="n_input">Yangfan2016</div>
+          <img src="./images/note_user.jpg" alt="空图片" class="n_pic" />
+       </div>
+       <div class="notebox clearfix">
+          <div class="n_input">全天<span class="n_input_arc"></span></div>
+          <img src="./images/note_time.jpg" alt="空图片" class="n_pic" />
+       </div>
+       <div class="notebox clearfix deadline">
+          <div class="n_input timefrom">2016/09/15</div>
+          <div class="n_input timeto">2016/09/15</div>
+       </div>
+       <div class="notebox clearfix">
+          <input placeholder="添加地点" class="n_input notelocation" />
+          <img src="./images/note_location.jpg" alt="空图片" class="n_pic" />
+       </div>
+       <div class="morenote">更多选项</div>
+    </div>
+    <div class="footer">
+       <div class="control clearfix">
+          <div class="c_cancel">取消</div>
+          <div class="c_save">保存</div>
+       </div>
+    </div>
+</div>
+<!--弹出框-->
+<div class="dialogbox">
+   <div class="dialogcontent">
+      <div class="d_head">
+         <div class="h_content">
+            <h3>选择日期</h3>
+         </div>
+         <div class="close">x</div>
+      </div>
+      <div class="d_body">
+         <select id="s_year" name="">
+            <option value="2016">2016年</option>
+            <option value="2017">2017年</option>
+            <option value="2018">2018年</option>
+            <option value="2019">2019年</option>
+         </select>
+         <select id="s_month" name="">
+            <option value="1">1月</option>
+            <option value="2">2月</option>
+            <option value="3">3月</option>
+            <option value="4">4月</option>
+            <option value="5">5月</option>
+            <option value="6">6月</option>
+            <option value="7">7月</option>
+            <option value="8">8月</option>
+            <option value="9">9月</option>
+            <option value="10">10月</option>
+            <option value="11">11月</option>
+            <option value="12">12月</option>
+         </select>
+      </div>
+      <div class="d_foot clearfix">
+         <div class="btnclose">关闭</div>
+         <div class="btnsave">保存</div>
+      </div>
+   </div>
+</div>
+<script src="./js/Zmove.js" type="text/javascript"></script>
+<script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

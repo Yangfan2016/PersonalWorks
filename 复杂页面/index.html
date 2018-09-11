@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>plan</title>
+	<link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+	<header class="page_head">
+		<div class="banner">
+			<img src="./images/banner.png" class="img_banner" alt="" />
+		</div>
+		<div class="loginbox">
+			<input type="text" class="input_query" id="inputQuery" />
+			<a href="javascript:void(0);" class="btn_login">登录</a>
+		</div>
+	</header>
+	<div class="page_main clearfix">
+		<!--左侧导航-->
+		<div class="main_left">
+			<div class="left_userinfo">
+				<div class="userinfo_profile clearfix">
+					<div class="profile_photo"></div>
+					<p class="profile_username">ABC123</p>
+				</div>
+				<div class="userinfo_follows clearfix">
+					<p class="follows_collection"><span>110</span><br />收藏</p>
+					<span class="follows_liner"></span>
+					<p class="follows_fans"><span>313</span><br />粉丝</p>
+				</div>
+			</div>
+			<div class="left_usercontent">
+				<p>个人报表</p>
+				<ul class="usercontent_folders" id="folderbox"> 
+					<li class="folder"><img src="./images/folder.png" style="width:10px;height:auto;" alt="" /> <span class="folderbtn">文件一</span>
+						<ul class="usercontent_files">
+							<li class="file">文档1</li>
+							<li class="file">文档2</li>
+						</ul>
+					</li>
+					<li class="folder"><img src="./images/folder.png" style="width:10px;height:auto;" alt="" /> <span class="folderbtn">文件二</span>
+						<ul class="usercontent_files">
+							<li class="file">文档1</li>
+							<li class="file">文档2</li>
+						</ul>
+					</li>
+					<li class="folder"><img src="./images/folder.png" style="width:10px;height:auto;" alt="" /> <span class="folderbtn">文件三</span>
+						<ul class="usercontent_files">
+							<li class="file">文档1</li>
+							<li class="file">文档2</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="left_usernav">
+				<ul>
+					<li class="usernav nav_collect">
+						<img src="./images/start.png" style="width:10px;height:auto;" alt="" /><span>个人收藏</span>
+					</li>
+					<li class="usernav nav_share">
+						<img src="./images/share.png" style="width:10px;height:auto;" alt="" /><span>我的分享</span>
+					</li>
+					<li class="usernav nav_pictures">
+						<img src="./images/start.png" style="width:10px;height:auto;" alt="" /><span>图库</span>
+					</li>
+					<li class="usernav nav_note">
+						<img src="./images/start.png" style="width:10px;height:auto;" alt="" /><span>成长记录</span>
+					</li>
+					<li class="usernav nav_count">
+						<img src="./images/info.png" style="width:10px;height:auto;" alt="" /><span>账户信息</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--右边的主体-->
+		<div class="main_body">
+			<div class="body_navbread">
+				<a href="javascript:void(0);">C站</a><span> / </span><a href="javascript:void(0);">个人报表</a><span> / </span><a href="javascript:void(0);">文件一</a><span> / </span><a href="javascript:void(0);" class="active">文档一</a>
+			</div>
+			<div class="body_mainbox">
+				<!-- 表单查询 -->
+				<div class="mainbox_queryform">
+					<form action="" class="clearfix">
+						<div class="formgroup">
+							<label for="">查询项</label><!--
+							--><select name="" id="" style="width:70px;">
+								<option value="">第一项</option>
+								<option value="">第二项</option>
+								<option value="">第三项</option>
+							</select>
+						</div>
+						<div class="formgroup" style="margin:0;">
+							<label for="">买方</label><!--
+							--><select name="" id="" style="width:120px;">
+								<option value="">小A</option>
+								<option value="">小B </option>
+								<option value="">小C</option>
+							</select>
+						</div>
+						<div class="formgroup change">
+							<a href="javascript:void(0);" class="btnchange"><img src="./images/change.png" alt="" /></a>
+						</div>
+						<div class="formgroup">
+							<label for="">日期</label><!--
+							<--><input type="date" value="2016-04-01" style="width:120px;" />
+						</div>
+						<div class="formgroup">
+							<label for="">总耗时</label><!--
+							--><select name="" id="" style="width:70px;">
+								<option value="">第一项</option>
+								<option value="">第二项</option>
+								<option value="">第三项</option>
+							</select>
+						</div>
+						<!--换行占位-->
+						<div class="formgroup" style="width:100%;height:6px;">
+						</div>
+						<!--占位-->
+						<div class="formgroup" style="visibility:hidden;">
+							<label for="">占位符</label><!--
+							--><select name="" id="" style="width:70px;">
+								<option value="">占位符</option>
+							</select>   
+						</div>
+						<div class="formgroup" style="margin:0;">
+							<label for="">卖方</label><!--
+							--><select name="" id="" style="width:120px;">
+								<option value="">小A</option>
+								<option value="">小B </option>
+								<option value="">小C</option>
+							</select>
+						</div>
+						<!--占位-->
+						<div class="formgroup change" style="top:0;height:1px;">
+							<a href="javascript:void(0);" class="btnchange" style="visibility:hidden;"><img src="./images/change.png" alt="" /></a>
+						</div>
+						<div class="formgroup">
+							<label for="">人数</label><!--
+							<--><select name="" id="" style="width:70px;">
+								<option value="">10 人</option>
+								<option value="">100 人</option>
+								<option value="">1000 人</option>
+							</select>
+						</div>
+						<div class="formgroup">
+							<label for="">成交项</label><!--
+							--><select name="" id="" style="width:120px;">
+								<option value="">10 项</option>
+								<option value="">100 项</option>
+								<option value="">1000 项</option>
+							</select>
+						</div>
+						<input type="submit" class="btnsubmit" value="提交" />
+					</form>
+				</div>
+				<!-- 历史查询 -->
+				<div class="mainbox_queryhistory">
+					<ul class="clearfix">
+						<li class="btnprev" id="btnPrev">
+							<a href="javascript:void(0);"><img src="./images/left_arrow.png" alt="" /></a>
+						</li>
+						<li class="timeblock">
+							<div class="container" id="container">
+								<ul class="blockbox clearfix" id="blockBox">
+									<li class="btntime active">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">10:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">11:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">12:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">13:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">14:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">15:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">16:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">17:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">18:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">19:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">20:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">21:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">22:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">23:00</span> <span class="AM">pm</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">00:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">01:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">02:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">03:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">04:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">05:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">06:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">07:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">08:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+									<li class="btntime">
+										<a href="javascript:void(0);">
+											<em class="timebox"><span class="time">09:00</span> <span class="AM">am</span></em>
+											<em class="pricebox"><span class="yuan">￥</span><span class="price">1200</span></em>
+										</a>
+									</li>
+								</ul>
+							</div>	
+						</li>
+						<li class="btnnext" id="btnNext">
+							<a href="javascript:void(0);"><img src="./images/right_arrow.png" alt="" /></a>
+						</li>
+						<li class="btnhistory">
+							<a href="javascript:void(0);"><img src="./images/calendar.png" alt="" /><span>历史查询</span></a>
+						</li>
+					</ul>
+				</div>
+				<!--统计模块-->
+				<div class="mainbox_statistics">
+					<h4 class="title"><span class="year">2016</span>年<span class="month">4月份统计</h4>
+					<ul class="databox clearfix">
+						<li class="data_item" style="box-shadow:inset 4px 0 #43b29f;">
+							<span class="total">11311</span>
+							<span class="text">成交量</span>
+							<span class="square" style="background:#43b29f;"></span>
+						</li>
+						<li class="data_item" style="box-shadow:inset 4px 0 #398ac1;">
+							<span class="total">11311</span>
+							<span class="text">成交量</span>
+							<span class="square" style="background:#398ac1;"></span>
+						</li>
+						<li class="data_item" style="box-shadow:inset 4px 0 #cf4b36;">
+							<span class="total">11311</span>
+							<span class="text">成交量</span>
+							<span class="square" style="background:#cf4b36;"></span>
+						</li>
+						<li class="data_item" style="box-shadow:inset 4px 0 #e1cd46;">
+							<span class="total">11311</span>
+							<span class="text">成交量</span>
+							<span class="square" style="background:#e1cd46;"></span>
+						</li>
+					</ul>
+				</div>
+				<!--项目-->
+				<div class="mainbox_project clearfix">
+					<div class="project_item pro_item1">
+						<div class="heading">
+							<h4 class="title">第一组项目</h4>
+						</div>
+						<div class="bodying">
+							<div class="tabs_nav" id="tab">
+								<label for="pro1" class="active">项目一</label><!--
+								--><label for="pro2">项目二</label><!--
+								--><label for="pro3">项目三</label><!--
+								--><label for="pro4">项目四</label><!--
+								--><label for="pro5">项目五</label>
+							</div>
+							<!-- 单选按钮 控制tab -->
+							<input type="radio" name="pro" id="pro1" class="pro" checked="checked" />
+							<div class="item">
+								<table border="2">
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+								</table>
+							</div>
+							<input type="radio" name="pro" id="pro2" class="pro" />
+							<div class="item">
+								<table border="2">
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+								</table>
+							</div>
+							<input type="radio" name="pro" id="pro3" class="pro" />
+							<div class="item">
+								<table border="2">
+									<tr>
+										<td>333</td>
+										<td>333</td>
+										<td>333</td>
+										<td>333</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+								</table>
+							</div>
+							<input type="radio" name="pro" id="pro4" class="pro" />
+							<div class="item">
+								<table border="2">
+									<tr>
+										<td>444</td>
+										<td>555</td>
+										<td>444</td>
+										<td>444</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+								</table>
+							</div>
+							<input type="radio" name="pro" id="pro5" class="pro" />
+							<div class="item">
+								<table border="2">
+									<tr>
+										<td>材料5</td>
+										<td>材料5</td>
+										<td>材料5</td>
+										<td>材料5</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+									<tr>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+										<td>购买材料一</td>
+									</tr>
+									<tr>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+										<td>材料一</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="project_item pro_item2">
+						<div class="heading">
+							<h4 class="title">第一组项目</h4>
+						</div>
+						<div class="bodying">
+							<dl>
+								<dt>标题</dt>
+								<dd>项目报表三</dd>
+							</dl>
+							<div class="dlgroup clearfix">
+								<dl>
+									<dt>价格</dt>
+									<dd>￥ 158</dd>
+								</dl>
+								<dl>
+									<dt>负责人</dt>
+									<dd>小A</dd>
+								</dl>
+							</div>
+							<dl>
+								<dt>详细描述</dt>
+								<dd>该项目目前负责人是......</dd>
+							</dl>
+							<div class="searchgroup clearfix">
+								<input type="checkbox" id="baomi" class="checkbaomi" />
+								<label for="baomi"><span class="_checkbox"><span class="ok">✔</span></span> 遵守保密协议</label>
+								<input type="button" class="serachbtn" value="搜索" />
+							</div>
+						</div>
+					</div>
+					<div class="project_item pro_item3">
+						<div class="heading">
+							<h4 class="title">日历</h4>
+						</div>
+						<div class="bodying">
+							<div class="controllbar">
+								<select name="" id="selectYear">
+									<option value="2018">2018年</option>
+									<option value="2017">2017年</option>
+									<option value="2016">2016年</option>
+									<option value="2015">2015年</option>
+									<option value="2014">2014年</option>
+									<option value="2013">2013年</option>
+									<option value="2012">2012年</option>
+									<option value="2011">2011年</option>
+									<option value="2010">2010年</option>
+									<option value="2009">2009年</option>
+									<option value="2008">2008年</option>
+									<option value="2007">2007年</option>
+								</select><!--
+								--><select name="" id="selectMonth">
+									<option value="12">12月</option>
+									<option value="11">11月</option>
+									<option value="10">10月</option>
+									<option value="9">9月</option>
+									<option value="8">8月</option>
+									<option value="7">7月</option>
+									<option value="6">6月</option>
+									<option value="5">5月</option>
+									<option value="4">4月</option>
+									<option value="3">3月</option>
+									<option value="2">2月</option>
+									<option value="1">1月</option>
+								</select><!--
+								--><select name="" id="">
+									<option value="">标注日期</option>
+									<option value="">销毁日期</option>
+								</select><!--
+								--><input type="button" class="backtonow" id="backToNow" value="返回今天"  />
+							</div>
+							<div class="calendar">
+								<table>
+									<thead>
+										<tr>
+											<td>日</td>
+											<td>一</td>
+											<td>二</td>
+											<td>三</td>
+											<td>四</td>
+											<td>五</td>
+											<td>六</td>
+										</tr>
+									</thead>
+									<tbody id="calendarBox">
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td><span class="day">1</span><br /><span class="lunar">初一</span></td>
+										</tr>
+										<tr>
+											<td><span class="day">2</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">3</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">4</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">5</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">6</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">7</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">8</span><br /><span class="lunar">初一</span></td>
+										</tr>
+										<tr>
+											<td><span class="day">2</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">3</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">4</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">5</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">6</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">7</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">8</span><br /><span class="lunar">初一</span></td>
+										</tr>
+										<tr>
+											<td><span class="day">2</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">3</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">4</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">5</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">6</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">7</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">8</span><br /><span class="lunar">初一</span></td>
+										</tr>
+										<tr>
+											<td><span class="day">2</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">3</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">4</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">5</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">6</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">7</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">8</span><br /><span class="lunar">初一</span></td>
+										</tr>
+										<tr>
+											<td><span class="day">2</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">3</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">4</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">5</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">6</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">7</span><br /><span class="lunar">初一</span></td>
+											<td><span class="day">8</span><br /><span class="lunar">初一</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="project_item pro_item4">
+						<div class="heading">
+							<h4 class="title">汽车行业品牌榜</h4>
+						</div>
+						<div class="bodying">
+							<table border="2">
+								<thead>
+									<tr>
+										<td>排名</td>
+										<td>品牌</td>
+										<td>搜索指数</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:85%;background-color:#ee6e51;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:80%;background-color:#ef8150;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:75%;background-color:#f19e4e;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:70%;background-color:#7fcbef;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:65%;background-color:#7fcbef;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:60%;background-color:#f00;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>7</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:55%;background-color:#f00;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>8</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:50%;background-color:#f00;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>9</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:45%;background-color:#f00;"><!--进度条--></span><span></td>
+									</tr>
+									<tr>
+										<td>10</td>
+										<td>大众</td>
+										<td>48912001<span class="progress"><span class="progressbar" style="width:40%;background-color:#f00;"><!--进度条--></span><span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!--scripts-->
+<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

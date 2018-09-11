@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*body{padding:60px 0;}*/
+.div1,
+.div2
+{
+   background:#ccc;
+}
+nav{
+   margin:0 !important;
+}
+.div2{
+   padding:30px 0;
+   
+}

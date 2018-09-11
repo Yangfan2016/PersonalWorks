@@ -1,0 +1,8 @@
+@charset "UTF-8";
+/* 换肤 */
+.head,
+.add,
+.newnote .left_arc,
+.active{
+background:#4883e2 !important;
+}

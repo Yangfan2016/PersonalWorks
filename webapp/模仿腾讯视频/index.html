@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+   <meta charset="UTF-8" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <title>首页</title>
+   <link rel="stylesheet" href="./css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/index.css" />
+</head>
+<body>
+   <!-- iframe-page -->
+   <div class="page">
+      <iframe src="./home.html" id="page_iframe" frameborder="0"></iframe>
+   </div>
+   <!-- navigation -->
+   <footer>
+      <a href="javascript:void(0);" class="nav_item item-home active" data-pagesrc="./home.html"><!--首页--></a><!--
+      --><a href="javascript:void(0);" class="nav_item item-hot" data-pagesrc="./hot.html"><!--热点--></a><!--
+      --><a href="javascript:void(0);" class="nav_item item-vip" data-pagesrc="./vip.html"><!--会员--></a><!--
+      --><a href="javascript:void(0);" class="nav_item item-live" data-pagesrc="./live.html"><!--直播--></a><!--
+      --><a href="javascript:void(0);" class="nav_item item-me" data-pagesrc="./me.html"><!--我的--></a>
+   </footer>
+<!-- scripts -->
+<script type="text/javascript">
+   var init=function () {
+      var frame=document.getElementById("page_iframe");
+      var foot=document.querySelectorAll("footer")[0];
+      var achors=document.querySelectorAll("footer .nav_item");
+      foot.addEventListener("click",function (ev) {
+         var ev=ev?ev:window.event;
+         var target=ev.target || ev.srcElement;
+         // 初始化样式
+         [].forEach.call(achors,function (item,index) {
+            item.className=String(item.className).replace(" active","");
+         });
+         // 高亮当前元素，并跳转相应框架链接
+         if (target.nodeName==="A") {
+            target.className+=" active";
+            // 避免重复加载
+            if (frame.getAttribute("src")!==target.dataset.pagesrc) {
+            	frame.src=target.dataset.pagesrc;
+            }
+         }
+
+      },false);
+   };
+   window.addEventListener("load",init,false);
+</script>
+</body>
+</html>

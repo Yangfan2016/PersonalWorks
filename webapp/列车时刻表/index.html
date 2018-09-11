@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<meta charset="utf-8" />
+	<title>火车时刻表-JQM</title>
+	<link rel="stylesheet" type="text/css" href="./jQuery-Mobile/jquery.mobile-1.4.5.min.css" />
+	<style type="text/css">
+	@media screen and (min-width:769px) {
+		.ui-mobile [data-role=page], 
+		.ui-page{
+			top:50%;left:50%;
+			min-height:0px !important;
+			width:300px;
+			height:600px;
+			-webkit-transform:translate(-50%,-50%);
+					transform:translate(-50%,-50%);
+			box-shadow:0 0 10px rgba(0,0,0,0.5);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="index">
+		<div data-role="header">
+			<h1>列车时刻表</h1>
+		</div>
+		<div role="main" class="ui-content" id="main_inputbox">
+			<div class="ui-field-contain">
+				<label for="start">发车站：</label>
+				<input type="text" name="start" id="start">
+			</div>
+			<div class="ui-field-contain">
+				<label for="end">终点站：</label>
+				<input type="text" name="end" id="end">
+			</div>
+			<div class="ui-field-contain">
+				<label for="no">车次：</label>
+				<input type="text" name="no" id="no">
+			</div>
+			<button data-role="button" id="search_btn">点击搜索</button>
+			<ul data-role="listview" data-inset="true" id="show_list">
+				<li><a href="##">
+					<h2>G0000</h2>
+					<p>xxx-xxx</p>
+					<p>00:00-23:59</p>
+					<p class="ui-li-aside">12:00 开</p>
+				</a></li>
+			</ul>
+			<h5><span>数据来源：</span><a href="http://www.webxml.com.cn/">http://www.webxml.com.cn/</a></h5>
+		</div>
+		<div data-role="footer" data-postion="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="##" data-icon="camera">查询</a></li>
+					<li><a href="##" data-icon="camera">查询</a></li>
+					<li><a href="##" data-icon="camera">查询</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="page2">
+		<div data-role="header">
+			<h2><span id="t_number">xx</span>车次详细信息</h2>
+		</div>
+		<div role="main" class="ui-content">
+			<table data-role="table" data-mode="reflow" class="ui-responsive table-stroke">
+				<thead>
+					<tr>
+						<th>途经站点</th>
+						<th>到站时间</th>
+						<th>发车时间</th>
+					</tr>
+				</thead>
+				<tbody id="t_body"></tbody>
+			</table>
+			<a data-role="button" href="#index">返回</a>
+			<h5><span>数据来源：</span><a href="http://www.webxml.com.cn/">http://www.webxml.com.cn/</a></h5>
+		</div>
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="##" data-icon="camera">查询</a></li>
+					<li><a href="##" data-icon="camera">查询</a></li>
+					<li><a href="##" data-icon="camera">查询</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--script-->
+<script type="text/javascript" src="./jQuery-libs/jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="./jQuery-Mobile/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	// https://crossorigin.me/ cors  ;
+	var cors="https://crossorigin.me/";
+	var url1 = "http://www.webxml.com.cn/WebServices/TrainTimeWebService.asmx/getStationAndTimeByStationName?UserID="; // 通过发车站和终点站查询
+    var url2 = "http://www.webxml.com.cn/WebServices/TrainTimeWebService.asmx/getStationAndTimeDataSetByLikeTrainCode?UserID="; // 通过车次查询
+    var url3 = "http://www.webxml.com.cn/WebServices/TrainTimeWebService.asmx/getDetailInfoByTrainCode?UserID="; // 通过车次查询详细信息
+    var url="";
+    var sendData={};
+    var flag_ajax=true;
+
+    // 
+    $("#main_inputbox input").on("keyup",function () {
+    	$("#search_btn").prop("disabled",false);
+    });
+	// 点击搜索
+	$("#search_btn").on("click",function () {
+		if ($("#start").val()!="" && $("#end").val()!="" || $("#no").val()!="") {
+			$.mobile.loading("show");
+			$("#search_btn").prop("disabled",true);
+			if ($("#no").val()!="") {
+				// getStationAndTimeDataSetByLikeTrainCode 
+				url=cors+url2;
+				sendData.TrainCode=$("#no").val();
+
+			}
+			else {
+				// getStationAndTimeByStationName
+				url=cors+url1;
+				sendData.StartStation=$("#start").val();
+				sendData.ArriveStation=$("#end").val();
+			}
+
+			// 异步请求
+			$.get(url,sendData,function (data,statusTxt,xhr) {
+				if (xhr.status==200) {
+					console.log(statusTxt);
+					$aTimeTable=$(data).find("TimeTable");
+					var showHtml="";
+					var $that=null;
+					$("#show_list").html("");
+					$aTimeTable.each(function (index,obj) {
+						$that=$(this);
+						// 只显示10条信息
+						if (index>9) {
+							return false;
+						}
+						// 查找不到的反馈
+						if ($that.find("FirstStation").text()=="数据没有被发现") {
+							alert("数据没有被发现");
+							return false;
+						}
+						showHtml+='<li><a href="##"><h2>'+$that.find("TrainCode").text()+'</h2><p>'+$that.find("FirstStation").text()+'--'+$that.find("LastStation").text()+'</p><p>'+$that.find("UseDate").text()+'</p><p class="ui-li-aside">'+$that.find("StartTime").text()+' 开</p></a></li>';
+					});
+					$("#show_list").html(showHtml).listview("refresh");
+				}
+				else {
+					alert("error: "+xhr.status);
+				}
+
+				$.mobile.loading("hide");
+				$("#search_btn").prop("disabled",false);
+
+			});
+			
+		}
+		else {
+			alert("请输入发车站和终点站或者车次");
+		}
+
+		
+	}); 
+	
+	// 获取车次详情信息
+	var getInfoByTrainCode=function ($_that) {
+		// 获取列表中的车次信息
+		var trainCode=$_that.find("h2").text();
+		sendData.TrainCode=trainCode;
+		$("#t_number").text(trainCode);
+		$("#t_body").html("");
+		var tbody_html="";
+		// 异步获取详细信息
+		$.get(cors+url3,sendData,function (data,statusTxt,xhr) {
+			if (xhr.status==200) {
+				console.log(statusTxt);
+				var $aTrainDetailInfo=$(data).find("TrainDetailInfo");
+				$aTrainDetailInfo.each(function (index,obj) {
+					$that3=$(this);
+					tbody_html+="<tr><td>"+$that3.find("TrainStation").text()+"</td><td>"+$that3.find("ArriveTime").text()+"</td><td>"+$that3.find("StartTime").text()+"</td></tr>";
+				});
+				$("#t_body").html(tbody_html);
+			}
+			else {
+				alert("error: "+xhr.status);
+			}
+			$.mobile.loading("hide");
+			$.mobile.changePage("#page2");
+		});
+	};
+
+	$("#show_list").on("click","a",function () {
+		$.mobile.loading("show");
+		getInfoByTrainCode($(this));
+	});
+</script>
+<!--script-->
+</body>
+</html>

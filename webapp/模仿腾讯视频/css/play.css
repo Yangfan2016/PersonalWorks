@@ -1,0 +1,227 @@
+@charset "UTF-8";
+*{padding:0;margin:0;}
+a{text-decoration:none;color:#333;}
+ul{list-style:none;}
+img{border-width:0;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+html,body{width:100%;height:100%;}
+html{font-size:12px;}/* root font */
+body{background:#fff;padding-top:40vh;}
+.videobox{
+	position:fixed;
+	top:0;left:0;
+	width:100%;
+	height:40vh;
+	background:#000;
+	z-index:2;
+	overflow:hidden;
+}
+.videobox>video{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.videoinfo,
+.videolist,
+.videoaround,
+.videocircle{
+	padding:1.5em 0;
+	margin:0 10px;
+	box-shadow:0 0.5px #ccc;
+}
+.videoinfo>.title{
+	font-size:1.8rem;
+}
+.videoinfo>.total{
+	margin:1em 0;
+	font-size:1.2rem;
+	color:#a3a3a3;
+}
+.btnbox a{
+	display:inline-block;
+	float:right;
+	margin-left:30px;
+	font-size:16px;
+	text-align:center;
+}
+.btnbox a:first-of-type{
+	float:left;
+	margin:0px;
+}
+.btnbox img{
+	height:25px;
+}
+.btnbox .text{
+	display:inline-block;
+	vertical-align:top;
+}
+.videolist .title,
+.videoaround .title,
+.videocircle .title{
+	font-size:16px;
+}
+.videolist .num,
+.videoaround .num,
+.videocircle .num{
+	float:right;
+	color:#9f9f9f;
+}
+.videolist .list .item a{
+	display:block;
+	position:relative;
+	margin:10px 0;
+}
+.videolist .list .item a>img{
+	display:block;
+	width:35%;
+	height:12vh;
+}
+.videolist .list .item a>.text{
+	position:absolute;
+	top:50%;right:0;
+	width:60%;
+	max-height:100%;
+	-webkit-transform:translate(0,-50%);
+			transform:translate(0,-50%);
+}
+.videolist .list .item a>.text>.title{
+	width:100%;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+.videolist .list .item.active a>.text>.title{
+	color:#f2881d;
+}
+.videolist .list .item a>.text>.total{
+	margin:5px 0;
+	color:#969696;
+}
+.videocircle .login{
+	display:block;
+	padding:10px 0;
+	margin-top:2em;
+	text-align:center;
+	font-size:1.2rem;
+	border-radius:5px;
+	background:#f3f7f8;
+	color:#797a7a;
+}
+/* fullscreen */ 
+:-webkit-full-screen .videobox{
+  width: 100vw;
+  height: 100vh;
+}
+/* controlbox */
+.controlbox{
+	position:absolute;
+	bottom:0;left:0;
+	width:100%;
+	height:15%;
+	background-color:rgba(0, 0, 0, 0.5);
+}
+.controlbox .fa{
+	font-size:2em;
+	color:#fff;
+}
+.btn_play{
+	position:absolute;
+	top:50%;left:3%;
+	-webkit-transform:translate(0,-50%);
+			transform:translate(0,-50%);
+}
+.btn_full{
+	position:absolute;
+	top:50%;right:3%;
+	-webkit-transform:translate(0,-50%);
+			transform:translate(0,-50%);
+}
+.btn_play_center{
+	position:absolute;
+	top:50%;left:50%;
+	-webkit-transform:translate(-50%,-50%);
+			transform:translate(-50%,-50%);
+	z-index:9;
+}
+.btn_play_center .fa{
+	font-size:5em;
+	color:#fff;
+}
+.progress{
+	position:absolute;
+	top:50%;left:50%;
+	width:50%;
+	height:2px;
+	background:#fff;
+	-webkit-transform:translate(-50%,-50%);
+			transform:translate(-50%,-50%);
+}
+.progress_bar{
+	position:absolute;
+	top:0;left:0;
+	width:0;
+	height:100%;
+	background-color:#c16912;
+}
+.arc{
+	position:absolute;
+	top:50%;left:100%;
+	width:12px;
+	height:12px;
+	-webkit-transform:translate(-50%,-50%);
+			transform:translate(-50%,-50%);
+	border-radius:50%;
+	background-color:#fd7000;
+	border:4px solid #b64d07;
+}
+.arc:after{
+ content:"";
+ position:absolute;
+ top:50%;left:50%;
+ width:20px;
+ height:20px;
+ -webkit-transform:translate(-50%,-50%);
+ transform:translate(-50%,-50%);
+ border-radius:50%;
+}
+.arc.hover:after{
+ border:5px solid #cf4807;
+}
+.time_start,
+.time_end{
+	position:absolute;
+	color:#fff;
+}
+.time_start{
+	top:50%;right:100%;
+	-webkit-transform:translate(-10px,-50%);
+			transform:translate(-10px,-50%);
+}
+.time_end{
+	top:50%;left:100%;
+	-webkit-transform:translate(10px,-50%);
+			transform:translate(10px,-50%);
+}
+/* tips */
+.tipbox{
+	position:absolute;
+	top:50%;left:50%;
+	padding:10px 15px;
+	-webkit-transform:translate(-50%,-50%);
+			transform:translate(-50%,-50%);
+	font-size:1.5rem;
+	background-color:rgba(0,0,0,0.5);
+	color:#fff;
+	opacity:0;
+	-webkit-animation:hiden linear 3s;
+	animation:hide linear 3s;
+}
+@keyframes hide{
+	0%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}

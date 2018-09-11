@@ -1,0 +1,174 @@
+@charset "UTF-8";
+*{padding:0;margin:0;}
+html,body{width:100%;height:100%;}
+body{
+width:100%;
+font-size:16px;
+font-family:"Microsoft YaHei";
+background:#f2f2f2;
+overflow-x:hidden;
+overflow-y:scroll;
+position:relative;
+}
+em{font-style:normal;}
+.clearfix:after{
+content:".";
+display:block;
+height:0;
+visibility:hidden;
+clear:both;
+}
+#indexPage{
+width:100%;
+min-height:700px;
+background:#f2f2f2;
+}
+.head{
+background:#df3830;
+color:#fefbfc;
+}
+.pannel_date{
+padding:10px 20px;
+}
+.nowDate{
+display:inline-block;
+font-size:2rem;
+line-height:2rem;
+position:relative;
+}
+.nowYd{
+font-size:0.8rem;
+line-height:1rem;
+position:absolute;
+top:0;left:100%;
+display:block;
+width:5em;
+}
+.nowYd em{
+display:block;
+}
+.pannel_week,
+.calendar{
+padding:10px 0 10px 20px;
+}
+.calendar{
+background:#fafafa;
+}
+.pannel_week>span,
+.calendar>div{
+float:left;
+width:calc((100vw - 40px) / 7);
+padding:10px 0 15px 0;
+text-align:center;
+}
+.calendar>div:hover{
+background:#efefef;
+}
+.calendar>div>h5{
+font-size:1.2rem;
+font-weight:200;
+color:#666;
+}
+.calendar>div>p{
+font-size:0.8rem;
+color:#666;
+}
+.active{
+background:#e95345 !important;
+}
+.active>h5{
+color:#fefbfc !important;
+}
+.active>p{
+color:#fefbfc !important;
+}
+.add{
+width:60px;
+height:60px;
+position:absolute;
+bottom:15px;
+left:50%;
+margin-left:-30px;
+font-size:2.5rem;
+font-weight:100;
+text-align:center;
+line-height:60px;
+border-radius:50%;
+background:#df3830;
+color:#fefbfc;
+}
+/* dialog */
+.dialogbox{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.65);
+}
+.dialogcontent{
+position:absolute;
+top:30%;left:50%;
+width:70%;
+margin-left:-35%;
+background:#fff;
+box-shadow:0 0 5px #ededed;
+}
+.d_head,
+.d_body,
+.d_foot{
+padding:10px 15px;
+border-bottom:1px solid #ccc;
+position:relative;
+}
+.d_head{
+color:#666;
+}
+.d_head .close{
+position:absolute;
+top:10px;right:15px;
+font-size:1.5rem;
+}
+.d_head .close:hover{
+color:#ccc;
+}
+.d_foot{border:none;}
+.d_foot .btnclose{
+display:none;
+}
+.d_foot .btnsave{
+float:right;
+padding:5px 10px;
+background:#f50;
+color:#fff;
+border:1px solid #fff;
+}
+.d_foot .btnsave:hover{
+background:#fff;
+color:#f50;
+border:1px solid #f50;
+}
+.d_body select{
+padding:5px 10px;
+margin-left:10px;
+border:1px solid #ccc;
+font-size:1.2rem;
+color:#4883e2;
+}
+/* PC */
+@media (min-width:769px) {
+	body{
+		width:480px !important;
+		height:700px !important;
+		margin:20px auto;
+		background:#fff !important;
+	}
+	.pannel_week>span,
+	.calendar>div{
+	width:calc((480px - 40px) / 7);
+	}
+	#indexPage{
+		box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	}
+	#notePage{visibility:hidden;}
+}
