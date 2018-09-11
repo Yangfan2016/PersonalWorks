@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+   <meta charset="UTF-8" />
+   <title>网易云音乐</title>
+   <link rel="stylesheet" href="./css/font-awesome.min.css" />
+   <link rel="stylesheet" href="./css/main.css" />
+</head>
+<body>
+   <div class="main">
+      <div class="headBox clearfix">
+         <div class="goBack"><i class="fa fa-arrow-left"></i></div>
+         <div class="title">
+            <p class="songName" id="songName">I Believe</p>
+            <p class="singerName" id="singerName">Who am I ?</p>
+         </div>
+      </div>
+      <div class="discBox">
+         <div class="volume">
+            <div class="volumnbar" id="volumnbar">
+               <span class="arc"></span>
+            </div>
+            <i class="fa fa-volume-up fa-1x"></i>
+         </div>
+         <div class="border"></div>
+         <div class="disc"></div>
+      </div>
+      <div class="controllBox">
+         <div class="progressBox">
+            <div class="curTime">00:00</div>
+            <div class="progressBar">
+               <span class="arc"></span>
+            </div>
+            <div class="totalTime">05:30</div>
+         </div>
+         <div class="prev">
+            <i class="fa fa-step-backward" id="prevBtn"></i>
+         </div>
+         <div class="playBox">
+            <i class="fa fa-play-circle" id="playBtn"></i>
+            <!-- <i class="fa fa-pause-circle"></i> -->
+         </div>
+         <div class="next">
+            <i class="fa fa-step-forward" id="nextBtn"></i>
+         </div>
+      </div>
+   </div>
+   <div class="blur"><!--高斯模糊背景--></div>
+   <audio src="./src/kimtaeyeon-I.mp3" id="audio">your browser didn't support this tag "audio"</audio>
+<script src="./js/main.js" type="text/javascript"></script>
+</body>
+</html>

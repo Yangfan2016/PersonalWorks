@@ -1,0 +1,368 @@
+*{padding:0;margin:0;}
+body{font-size:16px;font-family:"Microsoft YaHei";}
+a{text-decoration:none;color:#333;}
+/* fullpage-reset */
+.fp-controlArrow.fp-prev{
+	left:40px;
+	border-right-color:rgba(255,255,255,0.45);
+}
+.fp-controlArrow.fp-next{
+	right:40px;
+	border-left-color:rgba(255,255,255,0.45);
+}
+.fp-controlArrow.fp-prev:hover{
+	border-right-color:rgba(255,255,255,0.8);
+}
+.fp-controlArrow.fp-next:hover{
+	
+	border-left-color:rgba(255,255,255,0.8);
+}
+.fp-slidesNav ul li a span{
+	background:#fff;
+}
+.fp-slidesNav ul li a.active span{
+	background:#26f;
+}
+#fp-nav ul li:nth-of-type(1) a span,
+#fp-nav ul li:last-of-type a span{
+	display:none;
+}
+/* main-css */ 
+.s1{
+	background:url("../images/NewPolobanner.jpg") no-repeat;
+	background-size:cover;
+	position:relative;
+}
+.s1 .main-nav{
+	position:absolute;
+	top:0;left:0;
+	right:0;		
+	padding:0 15px;
+	height:60px;
+	background:rgba(255,255,255,0.8);
+	color:#333;
+	overflow:hidden;
+}
+.main-nav .banner{
+	float:left;
+	padding:0 15px;
+	height:60px;
+}
+.main-nav .banner a{
+	display:block;
+}
+.main-nav .banner img{
+	height:60px;
+	width:auto;
+}
+.main-nav .banner span{
+	line-height:60px;
+}
+.main-nav .flag{
+	float:left;
+	line-height:60px;
+	font-size:1.2rem;
+}
+.main-nav .nav{
+	float:right;
+	list-style:none;
+	height:60px;
+	overflow:hidden;
+}
+.main-nav .nav>li{
+	float:left;
+	width:60px;
+	line-height:60px;
+	text-align:center;
+}
+.s1 .buynow{
+	position:absolute;
+	bottom:100px;right:100px;
+	width:200px;
+	height:45px;
+	line-height:45px;
+	text-align:center;
+	color:#fffafa;
+	background: #18AA39;
+	font-size: 1.5rem;
+	border: 1px solid #f5eeee;
+	border-radius: 5px;
+	box-shadow:0 0 10px #000;
+}
+.s1 .buynow:hover{
+	background: #18c639;
+}
+.s1 .buynow:hover>a{
+	color:#fff;
+}
+.second-nav{
+	padding:1rem 2rem;
+	height:30px;
+	overflow:hidden;
+}
+.second-nav .flag{
+	float:left;
+	height:30px;
+}
+.second-nav .flag>a{
+	line-height:30px;
+}
+.second-nav .nav{
+	float:right;
+	list-style:none;
+}
+.second-nav .nav>li{
+	float:left;
+	padding:0 15px;
+}
+.second-nav .nav img{
+	height:30px;
+	width:auto;
+}
+.s2 .title,
+.s4 .title,
+.s5 .title,
+.s6 .title,
+.s7 .title{
+	padding:2rem 3rem;
+	text-align:center;
+}
+.s2 .title>p,
+.s4 .title>p,
+.s5 .title>p,
+.s6 .title>p,
+.s7 .title>p{
+	margin:10px 0;
+}
+.s2 .intro{
+	float:left;
+	width:33.33333%;
+	padding:15px;
+	background:#000;
+	color:#fff;
+	box-sizing:border-box;
+}
+.s2 .intro>img{
+	display:block;
+	width:100%;
+	height:auto;
+}
+.s2 .intro>h2,
+.s2 .intro>p{
+	padding:10px 15px;
+}
+.s2 .intro>p{
+	text-align-last:center;
+}
+.s2 .slogan{
+	clear:both;
+	background:#ccc;
+}
+.s2 .slogan>h2{
+	padding:2rem 3rem;
+	text-align:center;
+}
+.s3{
+	background:#333;
+	position:relative;
+}
+.s3 .s31{
+	background:url("../images/newPolo_layer01.jpg") no-repeat;
+	background-size:cover;
+}
+.s3 .s32{
+	background:url("../images/newPolo_layer02.jpg") no-repeat;
+	background-size:cover;
+}
+.s3 .s33{
+	background:url("../images/newPolo_layer03.jpg") no-repeat;
+	background-size:cover;
+}
+.s3 .s34{
+	background:url("../images/newPolo_layer04.jpg") no-repeat;
+	background-size:cover;
+}
+.s3 .title{
+	position:absolute;
+	top:0;left:0;
+	right:0;
+	padding:2rem 3rem;
+	text-align:center;
+	font-size:2rem;
+	color:#fff;
+	background:rgba(0,0,0,0.45);
+	border-bottom:1px solid #fff;
+	z-index:9;
+	text-shadow:0px 0px 15px #5cfe63;
+}
+.s4 .intro{
+	height:500px;
+	background:url("../images/carred.png") no-repeat;
+	background-position:center;
+	position:relative;
+}
+.s4 .intro>.engine,
+.s4 .intro>.shift,
+.s4 .intro>.mirror{
+	position:absolute;
+	width:150px;
+	padding:5px;
+	background:#000;
+	color:#fff;
+	overflow:hidden;
+	box-shadow:5px 5px 10px #333;
+}
+.s4 .intro>.engine{
+	top:0;left:15%;
+}
+.s4 .intro>.shift{
+	bottom:0;right:18%;
+}
+.s4 .intro>.mirror{
+	top:0;right:20%;		
+}
+.s4 .intro>.engine>img,
+.s4 .intro>.shift>img,
+.s4 .intro>.mirror>img{
+	width:100%;
+	height:auto;
+	line-height:0;
+}
+.s4 .intro>.engine>span,
+.s4 .intro>.shift>span,
+.s4 .intro>.mirror>span{
+	display:block;
+	padding:5px 10px;
+}
+.s5 .intro{
+	padding:0.5rem 3rem;
+	height:150px;
+	background:#781c1c;
+	color:#d7d7d7;
+	overflow:hidden;
+}
+.s5 .intro>.picbox{
+	float:left;
+	width:25%;
+	overflow:hidden;
+}
+.s5 .intro>.text{
+	float:right;
+	width:60%;
+}
+.s5 .intro>.picbox>img{
+	height:150px;
+	width:100%;
+	border:1px solid #333;
+}
+.s5 .intro>.text>h3{
+	padding:10px 15px;
+}
+.s5 .intro>.text>p{
+	padding:10px;
+}
+.s6{
+	background:#000;
+	color:#fff;
+}
+.s6 .videobox{
+	width:100%;
+}
+.s6 .videobox>video{
+	display:block;
+	width:900px;
+	height:450px;
+	margin:0 auto;
+	border:10px solid rgba(255,255,255,0.5);
+	border-radius:10px;
+	box-shadow:0 0 10px #fff;
+}
+.s7 .intro{
+	padding:2rem 3rem;
+}
+.s7>div:nth-of-type(2){
+	background:#F3F5F6;
+}
+.s7>div:nth-of-type(3){
+	background:#DDE1E4;
+}
+.s7 .cartype{
+	width:900px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.s7 .cartype>.title{
+	padding:15px 0;
+	text-align:center;
+	font-size:1.5rem; 
+}
+.s7 .cartype>.more{
+	float:left;
+	width:35%;
+}
+.s7 .cartype>.more>.carname{
+	padding:10px 15px;
+	font-size:1.5rem;
+	text-align:center;
+}
+.s7 .cartype>.more>.button{
+	width:250px;
+	height:36px;
+	margin:20px auto;
+	line-height:36px;
+	border-radius:5px;
+	text-align:center;
+	color:#fff;
+	background:#0099da;
+	cursor:pointer;
+}
+.s7 .cartype>.info{
+	float:right;
+	width:65%;
+}
+.s7 .cartype>.info>ul{
+	list-style:none;
+}
+.s7 .cartype>.info>ul>li{
+	float:left;
+	width:25%;
+}
+.s7 .cartype>.info>ul>li>.top,
+.s7 .cartype>.info>ul>li>.bottom{
+	margin:20px 10px;
+}
+.s7 .cartype>.info>ul>li>.top{
+	font-size:1.2rem;
+}
+.s7 .cartype>.info>ul>li>.bottom{
+	font-size:0.8rem;
+	color:#808890;
+}
+.page-foot{
+	padding:2rem 3rem;
+	border-top:1px solid #ccc;
+	background:#000;
+	color:#c6c6c6;
+}
+.page-foot>p{
+	text-align:center;
+	font-size:12px;
+}
+.page-foot .foot-nav{
+	width:100%;
+}
+.page-foot .foot-nav>ul{
+	list-style:none;
+	width:750px;
+	margin:10px auto;
+	overflow:hidden;
+}
+.page-foot .foot-nav>ul>li{
+	float:left;
+	width:150px;
+	line-height:30px;
+	text-align:center;
+}
+.page-foot .foot-nav>ul>li>a{
+	color:#c6c6c6;
+}

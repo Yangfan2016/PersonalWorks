@@ -1,0 +1,10 @@
+{
+  "name": "PersonalWorks",
+  "version": "1.0.0",
+  "description": "This my personal works",
+  "main": "index.js",
+  "repository": "https://github.com/Yangfan2016/PersonalWorks.git",
+  "author": "yangfan2016 <15234408101@163.com>",
+  "license": "MIT",
+  "private": true
+}

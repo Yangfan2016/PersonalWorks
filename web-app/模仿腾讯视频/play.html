@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+   <meta charset="UTF-8" />
+   <meta name="keywords" content="" />
+   <meta name="description" content="" />
+   <title>视频播放器</title>
+   <link rel="stylesheet" href="./css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/play.css" />
+   <script type="text/javascript" src="./js/zepto-1.2.0.min.js"></script>
+   <script type="text/javascript" src="./js/zepto.touch.js"></script>
+   <script type="text/javascript" src="./js/zepto-fx.js"></script>
+   <script type="text/javascript" src="./js/zepto-fx_methods.js"></script>
+</head>
+<body>
+   <div class="videobox" id="videobox">
+      <video src="./src/Volkswagen.mp4" poster="./images/poster.jpg"  id="video"></video>
+      <!-- <div class="tipbox">提示</div> -->
+      <div class="btn_play_center" id="btn_play_center"><i class="fa fa-play-circle-o" aria-hidden="true"><!--播放--></i></div>
+      <div class="controlbox" id="controlbox">
+         <!--进度条-->
+         <div class="progress" id="progress">
+            <div class="progress_bar" id="progresBar">
+               <div class="arc" id="controlArc"></div>
+            </div>
+            <div class="time_start" id="time_start">00:00:00</div>
+            <div class="time_end" id="time_end">23:59:59</div>
+         </div>
+         <!--按钮-->
+         <div class="btn_play" id="btn_play"><i class="fa fa-play" aria-hidden="true"><!--播放--></i>
+</div>
+         <div class="btn_full" id="btn_full"><i class="fa fa-expand" aria-hidden="true"><!-- 全屏 --></i>
+</div>
+      </div>
+   </div>
+   <div class="videoinfo">
+      <h3 class="title">每日头条</h3>
+      <div class="total"><span>100.3万</span>总播放量</div>
+      <div class="btnbox clearfix">
+         <a href="javascript:void(0);"><img src="./images/comment.jpg" alt="comment" /> <span class="text">评论</span></a>
+         <a href="javascript:void(0);"><img src="./images/share.jpg" alt="comment" /></a>
+         <a href="javascript:void(0);"><img src="./images/download.jpg" alt="comment" /></a>
+         <a href="javascript:void(0);"><img src="./images/like.jpg" alt="comment" /></a>
+      </div>
+   </div>
+   <div class="videolist">
+      <p class="title clearfix">专辑列表<span class="num">61</span></p>
+      <ul class="list">
+         <li class="item active">
+            <a href="javascript:void(0);">
+               <img src="./images/poster.jpg" alt="" />
+               <div class="text">
+                  <p class="title">全新大众，全新生活</p>
+                  <p class="total"><span>2.9万</span>次播放</p>
+               </div>
+            </a>
+         </li>
+         <li class="item">
+            <a href="javascript:void(0);">
+               <img src="./images/item001.jpg" alt="" />
+               <div class="text">
+                  <p class="title">一分钟读懂中央农村工作会议<br />一分钟读懂中央农村工作会议</p>
+                  <p class="total"><span>2.9万</span>次播放</p>
+               </div>
+            </a>
+         </li>
+         <li class="item">
+            <a href="javascript:void(0);">
+               <img src="./images/item001.jpg" alt="" />
+               <div class="text">
+                  <p class="title">一分钟读懂中央农村工作会议一分钟读懂中央农村工作会议</p>
+                  <p class="total"><span>2.9万</span>次播放</p>
+               </div>
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="videoaround">
+      <p class="title clearfix">周边推荐<span class="num">5</span></p>
+      <img class="ads" src="./images/ad.jpg" alt="" style="width:100%;height:auto;" />
+   </div>
+   <div class="videocircle">
+      <p class="title clearfix">影视圈<span class="num">1</span></p>
+      <a class="login" href="javascript:void(0);">1秒登陆，说说你的看法</a>
+      <!-- <ul class="comments">
+         <li class="item">
+            评论评论。。。
+            to be continued
+         </li>
+      </ul> -->
+   </div>
+   <!--test section-->
+
+<script src="./js/videbox.js" type="text/javascript"></script>
+</body>
+</html>

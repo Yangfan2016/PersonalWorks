@@ -1,0 +1,54 @@
+wyapi={
+	"url_GET":"http://s.music.163.com/search/get/",
+	// 必须参数
+	"s":"", // 搜索内容
+	"limit":1, // 返回数量
+	"type":1, // 返回类型 
+				// 歌曲 1
+				// 专辑 10
+				// 歌手 100
+				// 歌单 1000
+				// 用户 1002
+				// mv 1004
+				// 歌词 1006
+				// 主播电台 1009
+    "offset":1, // 偏移量，用于分页
+    // 非必须参数
+    "sub":false, // 意义不明
+    "MUSIC_U":"", // 意义不明
+};
+reqdata={
+	"code":200, // 未知
+	"result":{
+		"songCount":2385, // 搜索数量
+		"songs":[{
+			// 专辑
+			"album":{
+				"artists":{
+					"id":1131564,
+					"name":"周二珂",
+					"picUrl":"http://... .jpg"
+				},
+				"id":1212312,
+				"name":"告白气球",
+				"picUrl":"http://... .jpg"
+			},
+			// 艺术家
+			"artists":[{
+				"id":1131564,
+				"name":"周二珂",
+				"picUrl":"http://... .jpg"
+			}],
+			// 音频路径
+			"audio":"http://... .mp3",
+			// 歌曲id
+			"id":12311123,
+		    // 歌名
+			"name":"告白气球",
+			// 歌曲所在页面
+			"page":"http://... .html",
+			// 未知
+			"djProgramId":13213113
+		}],
+	}
+};
