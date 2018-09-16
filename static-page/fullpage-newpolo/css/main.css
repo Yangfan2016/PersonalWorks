@@ -3,11 +3,13 @@ body{font-size:16px;font-family:"Microsoft YaHei";}
 a{text-decoration:none;color:#333;}
 /* fullpage-reset */
 .fp-controlArrow.fp-prev{
-	left:40px;
+	left:50px;
+	border-width: 20px 20px 20px 0;
 	border-right-color:rgba(255,255,255,0.45);
 }
 .fp-controlArrow.fp-next{
-	right:40px;
+	right:50px;
+	border-width: 20px 0 20px 20px;
 	border-left-color:rgba(255,255,255,0.45);
 }
 .fp-controlArrow.fp-prev:hover{
@@ -190,10 +192,8 @@ a{text-decoration:none;color:#333;}
 	text-align:center;
 	font-size:2rem;
 	color:#fff;
-	background:rgba(0,0,0,0.45);
-	border-bottom:1px solid #fff;
+	background:#333;
 	z-index:9;
-	text-shadow:0px 0px 15px #5cfe63;
 }
 .s4 .intro{
 	height:500px;
