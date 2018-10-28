@@ -32,5 +32,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 ---
-![docor]()
 built upon love by [docor](https://github.com/turingou/docor.git) v0.3.0
