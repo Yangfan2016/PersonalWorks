@@ -6,8 +6,6 @@
 ### Attention
 #### This is my first personal works,welcome to visit and review !
 
-#### 这是我的个人作品，可以fork，仅仅用于学习交流，严禁一切面试用途
-
 
 
 ### MIT license
